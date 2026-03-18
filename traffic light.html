@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Traffic Signal</title>
+    <style>
+        .traffic-light {
+            width: 70px;
+            background: black;
+            padding: 20px;
+            border-radius: 20px;
+            margin-left: 1315px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .red {
+			width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 2px solid white;
+			animation-name: redlight;
+			animation-duration: 15s;
+			animation-iteration-count: 2;
+			background: red; 
+		}
+        .yellow { 
+			width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 2px solid white;
+			animation-name: yellowlight;
+			animation-duration: 15s;
+			animation-iteration-count: 2;
+			background: yellow;
+			}
+        .green {
+			width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 10px;
+            border: 2px solid white;
+			animation-name: greenlight;
+			animation-duration: 15s;
+			animation-iteration-count: 1;
+			background: green; 
+			}
+
+		 @keyframes greenlight{
+            0%{opacity:100%;}
+            39%{opacity: 100%;}
+            40%{opacity:20%;}
+            100%{opacity:20%;}
+         }
+         @keyframes yellowlight{
+            0%{opacity:20%;}
+            39%{opacity: 20%;}
+            40%{opacity:100%;}
+            59%{opacity: 100%;}
+            60%{opacity: 20%;}
+            100%{ opacity:20%;}
+        }
+        @keyframes redlight{
+            0%{opacity:20%;}
+            40%{opacity:20%;}
+            59%{opacity: 20%;}
+            60%{opacity:100%}
+            100%{opacity:100%;}
+         }
+		
+		.pole{
+			width: 40px;
+            height: 300px;
+			background: black;
+			margin-left: 1350px;
+		}
+		.road{
+			width: 1500px;
+            height: 150px;
+			background: black;
+		}
+		.strip{
+			margin-left:1100px;
+			width: 150px;
+            height: 16.8px;
+			border:7px solid black;
+			background: white;
+
+		}
+		.car {
+		 position: absolute;
+		top: 515px;
+		animation-name:mark;
+		animation-duration:20.5s;
+		animation-iteration-count:1;
+		}
+		@keyframes mark{
+		0%{left: -10%;}
+		54%{left:53%;}
+		75%{left:53%;}
+		100%{left:110%;}
+		}
+    </style>
+</head>
+<body>
+	<img src="giphy.gif" alt="ric1.gif" height=35% width=20% class="car"/>
+    <div class="traffic-light">
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+    </div>
+	<div class="pole"></div>
+	<div class="road">
+		<div class="strip"></div>
+		<div class="strip"></div>
+		<div class="strip"></div>
+		<div class="strip"></div>
+		<div class="strip"></div>
+	</div>
+
+</body>
+</html>
